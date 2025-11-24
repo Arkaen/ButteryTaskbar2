@@ -531,7 +531,7 @@ is_showing_window_due_to_scroll_action:= false;
 
 handle_mouse_scroll :: (delta: int, mouse_x: int, mouse_y: int) -> handled:= false {
 	// When the cursor is at the bottom edge of the primary monitor
-	if mouse_y == primary_monitor_rect.bottom-1
+	if mouse_y == primary_monitor_rect.top-1
 	&& primary_monitor_rect.left <= mouse_x && mouse_x < primary_monitor_rect.right
 	&& !should_show_taskbar_due_to_focus {
 
